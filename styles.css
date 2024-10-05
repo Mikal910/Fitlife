@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to bottom right, #1c1c1c, #2a2a2a); /* Darker gradient background */
+    color: #f1f1f1; /* Light text for contrast */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.9); /* Darker header */
+    color: #fff;
+    padding: 15px 0; /* Increased padding for better alignment */
+    display: flex;
+    justify-content: space-between; /* Aligns items properly */
+    align-items: center; /* Center aligns items vertically */
+}
+
+.logo {
+    display: inline-block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ff5722; /* Logo color */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Logo shadow for depth */
+}
+
+nav ul {
+    list-style: none;
+    display: flex; /* Flexbox for horizontal alignment */
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+nav a:hover {
+    color: #ff5722; /* Change color on hover */
+}
+
+.hero {
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), rgba(255, 87, 34, 0.7)), url('https://source.unsplash.com/1600x900/?gym,fitness') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h2 {
+    font-size: 3rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ff5722;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #e64a19;
+}
+
+section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about, .classes, .membership, .contact {
+    background: #3a3a3a; /* Darker section background */
+    color: #f1f1f1; /* Light text for readability */
+    padding: 50px 0;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Soft shadow for depth */
+    margin: 20px auto; /* Space between sections */
+    max-width: 800px; /* Limit width for better readability */
+}
+
+.about h2, .classes h2, .membership h2, .contact h2 {
+    font-size: 2.5rem; /* Increased header size for better visibility */
+    margin-bottom: 20px; /* Space below headers */
+}
+
+.about p, .classes ul, .membership ul {
+    margin: 10px 0; /* Space between paragraphs and lists */
+    font-size: 1.2rem; /* Improved readability */
+}
+
+.classes {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items */
+    justify-content: center; /* Center items vertically */
+}
+
+.classes .accordion {
+    margin: 10px 0; /* Space between accordion buttons */
+    width: 90%; /* Make the buttons take 90% of the container width */
+    max-width: 600px; /* Limit the max width for larger screens */
+}
+
+.panel {
+    width: 90%; /* Match the width of the accordion */
+    max-width: 600px; /* Limit the max width for larger screens */
+    margin: 0 auto; /* Center the panel */
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 12px; /* Increased padding for comfort */
+    margin: 10px 0; /* Space between inputs */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s; /* Smooth border color change */
+}
+
+.contact input:focus, .contact textarea:focus {
+    border-color: #ff5722; /* Border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+.contact button {
+    padding: 12px 15px;
+    background: #ff5722;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 1rem; /* Larger button text */
+}
+
+.contact button:hover {
+    background: #e64a19;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Accordion styles */
+.accordion {
+    background-color: #ff5722;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    width: 90%; /* Make the buttons take 90% of the container width */
+    max-width: 600px; /* Limit the max width for larger screens */
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.2rem;
+    transition: background 0.3s ease;
+    border-radius: 5px;
+}
+
+.accordion:hover {
+    background-color: #e64a19; /* Darker on hover */
+}
+
+.accordion.active,
+.accordion:hover {
+    background-color: #e64a19; /* Active state */
+}
+
+.panel {
+    padding: 0 15px;
+    display: none; /* Hidden by default */
+    overflow: hidden;
+    background-color: #3a3a3a; /* Darker panel background */
+    color: #f1f1f1;
+}

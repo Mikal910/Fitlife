@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitLife Gym</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">FitLife Gym</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#classes">Classes</a></li>
+                    <li><a href="#membership">Membership</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <h2>Welcome to FitLife Gym</h2>
+        <p>Your journey to fitness starts here!</p>
+        <a href="#membership" class="btn">Join Now</a>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>FitLife Gym is dedicated to helping you achieve your fitness goals in a supportive environment. Join us and become part of our fitness family!</p>
+        </div>
+    </section>
+
+    <section id="classes" class="classes">
+        <div class="container">
+            <h2>Our Classes</h2>
+            <button class="accordion">Yoga</button>
+            <div class="panel">
+                <p>Join our Yoga classes to improve flexibility and relaxation.</p>
+            </div>
+            <button class="accordion">HIIT</button>
+            <div class="panel">
+                <p>High-Intensity Interval Training to boost your cardio fitness.</p>
+            </div>
+            <button class="accordion">Spinning</button>
+            <div class="panel">
+                <p>Enjoy a fun and energizing cycling workout.</p>
+            </div>
+            <button class="accordion">Personal Training</button>
+            <div class="panel">
+                <p>Work one-on-one with a personal trainer to achieve your goals.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="membership" class="membership">
+        <div class="container">
+            <h2>Membership Plans</h2>
+            <p>Choose the plan that works for you!</p>
+            <ul>
+                <li>Monthly: $50</li>
+                <li>Yearly: $500</li>
+                <li>Student Discount: 20% off</li>
+            </ul>
+            <a href="#contact" class="btn">Sign Up</a>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Membership Details</h2>
+            <p id="modal-details"></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 FitLife Gym. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
